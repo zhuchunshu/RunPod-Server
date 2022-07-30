@@ -9,7 +9,9 @@ class AdminOptionsModel extends Model
 {
     use HasFactory;
 
-    public $table = 'admin_options';
+    protected $table = 'admin_options';
 
     protected $fillable = ['name','value'];
+
+    public $timestamps = false;
 }

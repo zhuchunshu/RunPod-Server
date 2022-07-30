@@ -13,14 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+//支付回调地址
+Route::get('/notify', function () {
     return view('welcome');
-});
-
-Route::prefix('wechat')->name('wechat.')->group(function(){
-
-    // 微信公众号登录回调链接
-    Route::get('redirect',function(){
-        return 1;
-    })->name('redirect');
-});
+})->name('notify');
